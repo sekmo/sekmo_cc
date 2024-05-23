@@ -3,140 +3,140 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Mographs - Francesco Mari">
-	<header class="wrapper">
-		<p class="site-title">
-			<a href="/">Francesco Mari</a>
-		</p>
-		<ul class="nav">
-			<li class="nav__item">
-				<a href="/">About</a>
-			</li>
-			<li class="nav__item">
-				<a href="/projects">Projects</a>
-			</li>
-			<li class="nav__item">
-				<a href="/francesco-mari-resume.pdf" target="_blank">Resume</a>
-			</li>
-			<li class="nav__item">
-				<a href="/serendipity">Interesting things</a>
-			</li>
-			<li class="nav__item nav__item--current">
-				<a href="/mographs">Mographs</a>
-			</li>
-		</ul>
-	</header>
-	<main class="content wrapper clearfix">
-		<div class="mographs">
-			<h1 class="page-title">Motion graphics</h1>
-			<p>I've always been curious about animation theory, texturing, and 3d modelling - and for a short period I had the chance to work with motion graphics in a small studio.</p>
-			<p>Here are some animations I enjoyed making!</p>
-			<div class="mographs__item">
-				<button class="mographs__item__play-button">Play</button>
-				<video loop poster="mographs/ghosts.jpg" playsinline>
-					<source src="mographs/ghosts.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-					<source src="mographs/ghosts.webm" type='video/webm;codecs="vp8, vorbis"' />
-				</video>
-			</div>
-			<div class="mographs__item">
-				<button class="mographs__item__play-button">Play</button>
-				<video loop poster="mographs/cubes.jpg" style="filter: brightness(120%);" playsinline>
-					<source src="mographs/cubes.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-					<source src="mographs/cubes.webm" type='video/webm;codecs="vp8, vorbis"' />
-				</video>
-			</div>
-			<div class="mographs__item">
-				<button class="mographs__item__play-button">Play</button>
-				<video loop poster="mographs/vangogh.jpg" playsinline>
-					<source src="mographs/vangogh.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-					<source src="mographs/vangogh.webm" type='video/webm;codecs="vp8, vorbis"' />
-				</video>
-			</div>
-			<div class="mographs__item">
-				<button class="mographs__item__play-button">Play</button>
-				<video loop poster="mographs/santemidio.jpg" playsinline>
-					<source src="mographs/santemidio.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-					<source src="mographs/santemidio.webm" type='video/webm;codecs="vp8, vorbis"' />
-				</video>
-			</div>
-			<div class="mographs__item">
-				<button class="mographs__item__play-button">Play</button>
-				<video loop poster="mographs/genova.jpg" playsinline>
-					<source src="mographs/genova.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-					<source src="mographs/genova.webm" type='video/webm;codecs="vp8, vorbis"' />
-				</video>
-			</div>
-			<div class="mographs__item">
-				<button class="mographs__item__play-button">Play</button>
-				<video loop poster="mographs/ship.jpg" playsinline>
-					<source src="mographs/ship.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-					<source src="mographs/ship.webm" type='video/webm;codecs="vp8, vorbis"' />
-				</video>
-			</div>
-		</div>
-		<script type="text/javascript">
-			// var playButtons = document.getElementsByClassName('mographs__item__play-button');
-			var allVideoElements = document.getElementsByTagName('video');
-	
-			function pauseVideo(video) {
-				var button = video.parentNode.getElementsByClassName('mographs__item__play-button')[0];
-				video.pause();
-				button.innerText = 'Play'
-				button.classList.remove('is-faded');
-			}
-	
-			function playVideo(video) {
-				for (var i = 0; i < allVideoElements.length; i++) {
-					pauseVideo(allVideoElements[i]);
-				}
-				var button = video.parentNode.getElementsByClassName('mographs__item__play-button')[0];
-				video.play();
-				button.innerText = 'Pause'
-				button.classList.add('is-faded');
-			}
-	
-			function playButtonHandler() {
-				var video = this.parentNode.getElementsByTagName('video')[0];
-				togglePlay(video);
-			}
-	
-			function clickVideoHandler() {
-				togglePlay(this);
-			}
-	
-			function togglePlay(video) {
-				if (video.paused) {
-					playVideo(video);
-				} else {
-					pauseVideo(video);
-				}
-			}
-			for (var i = 0; i < allVideoElements.length; i++) {
-				var video = allVideoElements[i];
-				var button = video.parentNode.getElementsByClassName('mographs__item__play-button')[0];
-				video.addEventListener("click", clickVideoHandler, false);
-				button.addEventListener("click", playButtonHandler, false);
-			}
-		</script>
-	</main>
-	<footer class="wrapper">
-		<span>Say hello! 🍻</span>
-		<ul class="contact_links">
-			<li>
-				<a href="https://github.com/sekmo" target="_blank">github
-			</li>
-			</a>
-			<li>
-				<a href="https://twitter.com/sekmo" target="_blank">twitter
-			</li>
-			</a>
-			<li>
-				<a href="https://telegram.me/sekmo" target="_blank">telegram
-			</li>
-			</a>
-			<li>
-				<a href="mailto:francescojjmari@gmail.com" target="_blank">email
-			</li>
-			</a>
-		</ul>
-	</footer>
+  <header class="wrapper">
+    <p class="site-title">
+      <a href="/">Francesco Mari</a>
+    </p>
+    <ul class="nav">
+      <li class="nav__item">
+        <a href="/">About</a>
+      </li>
+      <li class="nav__item">
+        <a href="/projects">Projects</a>
+      </li>
+      <li class="nav__item">
+        <a href="/francesco-mari-resume.pdf" target="_blank">Resume</a>
+      </li>
+      <li class="nav__item">
+        <a href="/serendipity">Interesting things</a>
+      </li>
+      <li class="nav__item nav__item--current">
+        <a href="/mographs">Mographs</a>
+      </li>
+    </ul>
+  </header>
+  <main class="content wrapper clearfix">
+    <div class="mographs">
+      <h1 class="page-title">Motion graphics</h1>
+      <p>I've always been curious about animation theory, texturing, and 3d modelling - and for a short period I had the chance to work with motion graphics in a small studio.</p>
+      <p>Here are some animations I enjoyed making!</p>
+      <div class="mographs__item">
+        <button class="mographs__item__play-button">Play</button>
+        <video loop poster="mographs/ghosts.jpg" playsinline>
+          <source src="mographs/ghosts.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="mographs/ghosts.webm" type='video/webm;codecs="vp8, vorbis"' />
+        </video>
+      </div>
+      <div class="mographs__item">
+        <button class="mographs__item__play-button">Play</button>
+        <video loop poster="mographs/cubes.jpg" style="filter: brightness(120%);" playsinline>
+          <source src="mographs/cubes.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="mographs/cubes.webm" type='video/webm;codecs="vp8, vorbis"' />
+        </video>
+      </div>
+      <div class="mographs__item">
+        <button class="mographs__item__play-button">Play</button>
+        <video loop poster="mographs/vangogh.jpg" playsinline>
+          <source src="mographs/vangogh.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="mographs/vangogh.webm" type='video/webm;codecs="vp8, vorbis"' />
+        </video>
+      </div>
+      <div class="mographs__item">
+        <button class="mographs__item__play-button">Play</button>
+        <video loop poster="mographs/santemidio.jpg" playsinline>
+          <source src="mographs/santemidio.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="mographs/santemidio.webm" type='video/webm;codecs="vp8, vorbis"' />
+        </video>
+      </div>
+      <div class="mographs__item">
+        <button class="mographs__item__play-button">Play</button>
+        <video loop poster="mographs/genova.jpg" playsinline>
+          <source src="mographs/genova.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="mographs/genova.webm" type='video/webm;codecs="vp8, vorbis"' />
+        </video>
+      </div>
+      <div class="mographs__item">
+        <button class="mographs__item__play-button">Play</button>
+        <video loop poster="mographs/ship.jpg" playsinline>
+          <source src="mographs/ship.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="mographs/ship.webm" type='video/webm;codecs="vp8, vorbis"' />
+        </video>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // var playButtons = document.getElementsByClassName('mographs__item__play-button');
+      var allVideoElements = document.getElementsByTagName('video');
+  
+      function pauseVideo(video) {
+        var button = video.parentNode.getElementsByClassName('mographs__item__play-button')[0];
+        video.pause();
+        button.innerText = 'Play'
+        button.classList.remove('is-faded');
+      }
+  
+      function playVideo(video) {
+        for (var i = 0; i < allVideoElements.length; i++) {
+          pauseVideo(allVideoElements[i]);
+        }
+        var button = video.parentNode.getElementsByClassName('mographs__item__play-button')[0];
+        video.play();
+        button.innerText = 'Pause'
+        button.classList.add('is-faded');
+      }
+  
+      function playButtonHandler() {
+        var video = this.parentNode.getElementsByTagName('video')[0];
+        togglePlay(video);
+      }
+  
+      function clickVideoHandler() {
+        togglePlay(this);
+      }
+  
+      function togglePlay(video) {
+        if (video.paused) {
+          playVideo(video);
+        } else {
+          pauseVideo(video);
+        }
+      }
+      for (var i = 0; i < allVideoElements.length; i++) {
+        var video = allVideoElements[i];
+        var button = video.parentNode.getElementsByClassName('mographs__item__play-button')[0];
+        video.addEventListener("click", clickVideoHandler, false);
+        button.addEventListener("click", playButtonHandler, false);
+      }
+    </script>
+  </main>
+  <footer class="wrapper">
+    <span>Say hello! 🍻</span>
+    <ul class="contact_links">
+      <li>
+        <a href="https://github.com/sekmo" target="_blank">github
+      </li>
+      </a>
+      <li>
+        <a href="https://twitter.com/sekmo" target="_blank">twitter
+      </li>
+      </a>
+      <li>
+        <a href="https://telegram.me/sekmo" target="_blank">telegram
+      </li>
+      </a>
+      <li>
+        <a href="mailto:francescojjmari@gmail.com" target="_blank">email
+      </li>
+      </a>
+    </ul>
+  </footer>
 </Layout>
